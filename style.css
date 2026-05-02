@@ -1,0 +1,76 @@
+body {
+  font-family: Georgia, serif;
+  background: #fdf6ee;
+  color: #2c2c2c;
+  margin: 0;
+  padding: 0;
+}
+
+.toc-container, .chapter-container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.3rem;
+}
+
+.synopsis {
+  font-style: italic;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.chapter-list {
+  list-style: none;
+  padding: 0;
+}
+
+.chapter-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.chapter-list a {
+  text-decoration: none;
+  color: #8b4513;
+  font-size: 1rem;
+}
+
+.chapter-list a:hover {
+  text-decoration: underline;
+}
+
+.chapter-body p {
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.chapter-body .dialogue {
+  color: #6b3a2a;
+}
+
+.chapter-nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+  font-size: 0.95rem;
+}
+
+.chapter-nav a {
+  text-decoration: none;
+  color: #8b4513;
+}
+
+.chapter-nav a:hover {
+  text-decoration: underline;
+}
