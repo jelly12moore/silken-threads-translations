@@ -916,7 +916,6 @@ function buildTOC() {
     const href = ch.url ? ch.url : '#';
     const target = ch.url ? 'target="_blank" rel="noopener"' : '';
     const onclick = ch.url ? '' : `onclick="openLocalChapter(${i}); return false;"`;
-    const badge = ch.url ? '<span class="toc-badge toc-badge-ext">Foxaholic ↗</span>' : '<span class="toc-badge toc-badge-own">My TL</span>';
     return `<li>
       <a href="${href}" ${target} ${onclick} class="toc-ch-link">
         <span class="toc-ch-num">${i + 1}</span>
