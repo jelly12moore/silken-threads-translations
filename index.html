@@ -7,524 +7,15 @@
 <title>Silken Thread Translations</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 
 <!-- ═══════════════════════════════════════════════
      ADSENSE: Replace ca-pub-XXXXXXXXXXXXXXXX with your Publisher ID
      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
      ═══════════════════════════════════════════════ -->
 
-<style>
-  :root {
-    --bg: #0e0c10;
-    --bg2: #161319;
-    --bg3: #1e1b22;
-    --surface: #252229;
-    --border: rgba(255,255,255,0.07);
-    --accent: #c9a96e;
-    --accent2: #e8c89a;
-    --text: #e8e3dd;
-    --muted: #8a8080;
-    --danger: #c97c7c;
-    --serif: 'Cormorant Garamond', Georgia, serif;
-    --sans: 'DM Sans', sans-serif;
-    --max: 860px;
-  }
-
-  [data-theme="light"] {
-    --bg: #f9f6f1;
-    --bg2: #f2ede6;
-    --bg3: #ece5db;
-    --surface: #ffffff;
-    --border: rgba(0,0,0,0.09);
-    --accent: #8a6530;
-    --accent2: #a07840;
-    --text: #1a1614;
-    --muted: #7a7068;
-  }
-
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: var(--sans);
-    font-weight: 300;
-    line-height: 1.7;
-    transition: background 0.3s, color 0.3s;
-  }
-
-  /* ── ORNAMENT ── */
-  .ornament {
-    display: block;
-    text-align: center;
-    color: var(--accent);
-    font-family: var(--serif);
-    font-size: 20px;
-    letter-spacing: 0.3em;
-    opacity: 0.6;
-    margin: 0.5rem 0;
-  }
-
-  /* ── TOP NAV ── */
-  nav {
-    position: sticky; top: 0; z-index: 100;
-    background: var(--bg);
-    border-bottom: 1px solid var(--border);
-    padding: 0 1.5rem;
-    display: flex; align-items: center; justify-content: space-between;
-    height: 56px;
-    backdrop-filter: blur(8px);
-  }
-
-  .nav-brand {
-    font-family: var(--serif);
-    font-size: 18px;
-    font-weight: 400;
-    letter-spacing: 0.04em;
-    color: var(--accent);
-    text-decoration: none;
-  }
-
-  .nav-links {
-    display: flex; gap: 1.5rem; align-items: center;
-    list-style: none;
-  }
-
-  .nav-links a {
-    color: var(--muted);
-    text-decoration: none;
-    font-size: 13px;
-    letter-spacing: 0.05em;
-    transition: color 0.2s;
-  }
-
-  .nav-links a:hover { color: var(--text); }
-
-  .theme-toggle {
-    background: none; border: 1px solid var(--border);
-    border-radius: 20px; padding: 4px 10px;
-    color: var(--muted); cursor: pointer; font-size: 13px;
-    font-family: var(--sans); transition: all 0.2s;
-  }
-
-  .theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
-
-  /* ── HERO ── */
-  .hero {
-    min-height: 92vh;
-    display: flex; flex-direction: column;
-    align-items: center; justify-content: center;
-    text-align: center;
-    padding: 4rem 1.5rem;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .hero::before {
-    content: '';
-    position: absolute; inset: 0;
-    background: radial-gradient(ellipse 60% 50% at 50% 40%, rgba(201,169,110,0.08) 0%, transparent 70%);
-    pointer-events: none;
-  }
-
-  .hero-tag {
-    font-size: 11px; letter-spacing: 0.2em;
-    color: var(--accent); text-transform: uppercase;
-    border: 1px solid rgba(201,169,110,0.3);
-    padding: 4px 14px; border-radius: 20px;
-    margin-bottom: 1.5rem;
-    display: inline-block;
-  }
-
-  .hero h1 {
-    font-family: var(--serif);
-    font-size: clamp(2.8rem, 7vw, 5.5rem);
-    font-weight: 300;
-    line-height: 1.1;
-    letter-spacing: -0.01em;
-    margin-bottom: 0.5rem;
-    color: var(--text);
-  }
-
-  .hero h1 em {
-    font-style: italic;
-    color: var(--accent2);
-  }
-
-  .hero-sub {
-    font-size: clamp(14px, 2vw, 16px);
-    color: var(--muted);
-    max-width: 480px;
-    margin: 1.5rem auto 2.5rem;
-    line-height: 1.8;
-  }
-
-  .hero-cta {
-    display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
-  }
-
-  .btn {
-    display: inline-flex; align-items: center; gap: 6px;
-    padding: 11px 24px; border-radius: 4px;
-    font-size: 13px; font-family: var(--sans);
-    letter-spacing: 0.05em; cursor: pointer;
-    text-decoration: none; transition: all 0.2s;
-    border: 1px solid transparent;
-  }
-
-  .btn-primary {
-    background: var(--accent);
-    color: #0e0c10;
-    font-weight: 500;
-  }
-
-  .btn-primary:hover { background: var(--accent2); }
-
-  .btn-outline {
-    border-color: var(--border);
-    color: var(--muted);
-    background: transparent;
-  }
-
-  .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
-
-  .btn-patreon {
-    background: #ff424d;
-    color: #fff;
-    font-weight: 500;
-  }
-
-  .btn-patreon:hover { background: #e63946; }
-
-  /* ── AD SLOTS ── */
-  .ad-slot {
-    background: var(--bg2);
-    border: 1px dashed var(--border);
-    border-radius: 4px;
-    display: flex; align-items: center; justify-content: center;
-    color: var(--muted); font-size: 12px;
-    letter-spacing: 0.05em;
-  }
-
-  .ad-banner { width: 100%; height: 90px; margin: 2rem 0; }
-  .ad-rect { width: 300px; height: 250px; flex-shrink: 0; }
-  .ad-leaderboard { width: 100%; max-width: 728px; height: 90px; margin: 2rem auto; }
-
-  /* ── SECTIONS ── */
-  section { padding: 5rem 1.5rem; }
-
-  .section-inner { max-width: var(--max); margin: 0 auto; }
-
-  .section-header {
-    text-align: center;
-    margin-bottom: 3rem;
-  }
-
-  .section-header h2 {
-    font-family: var(--serif);
-    font-size: clamp(1.8rem, 4vw, 2.8rem);
-    font-weight: 300;
-    letter-spacing: 0.02em;
-    margin-bottom: 0.5rem;
-  }
-
-  .section-header p {
-    color: var(--muted); font-size: 14px;
-  }
-
-  /* ── NOVEL LIBRARY ── */
-  #library { background: var(--bg2); }
-
-  .novel-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 1.5rem;
-  }
-
-  .novel-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.2s, border-color 0.2s;
-    text-decoration: none;
-    color: inherit;
-    display: block;
-  }
-
-  .novel-card:hover {
-    transform: translateY(-3px);
-    border-color: rgba(201,169,110,0.3);
-  }
-
-  .novel-cover {
-    height: 180px;
-    display: flex; align-items: center; justify-content: center;
-    font-family: var(--serif);
-    font-size: 2.5rem;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .novel-cover::after {
-    content: '';
-    position: absolute; bottom: 0; left: 0; right: 0;
-    height: 60px;
-    background: linear-gradient(transparent, var(--surface));
-  }
-
-  .novel-info { padding: 1rem; }
-
-  .novel-title {
-    font-family: var(--serif);
-    font-size: 17px;
-    font-weight: 400;
-    margin-bottom: 4px;
-    line-height: 1.3;
-  }
-
-  .novel-author { font-size: 12px; color: var(--muted); margin-bottom: 8px; }
-
-  .novel-tags { display: flex; gap: 4px; flex-wrap: wrap; }
-
-  .tag {
-    font-size: 10px; letter-spacing: 0.06em;
-    padding: 2px 8px; border-radius: 2px;
-    background: var(--bg3);
-    color: var(--muted);
-    text-transform: uppercase;
-  }
-
-  .tag-gold { background: rgba(201,169,110,0.12); color: var(--accent); }
-
-  .chapter-count {
-    font-size: 11px; color: var(--accent);
-    margin-top: 8px;
-  }
-
-  /* ── CHAPTER VIEW ── */
-  #chapter-view {
-    display: none;
-    background: var(--bg);
-    min-height: 100vh;
-    padding: 0;
-  }
-
-  .chapter-nav-bar {
-    position: sticky; top: 56px; z-index: 90;
-    background: var(--bg);
-    border-bottom: 1px solid var(--border);
-    padding: 0.75rem 1.5rem;
-    display: flex; align-items: center; justify-content: space-between;
-    gap: 1rem;
-  }
-
-  .chapter-title-bar {
-    font-family: var(--serif);
-    font-size: 15px;
-    color: var(--muted);
-    flex: 1; text-align: center;
-    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-  }
-
-  .chapter-nav-btn {
-    background: none; border: 1px solid var(--border);
-    color: var(--muted); cursor: pointer; border-radius: 3px;
-    padding: 5px 14px; font-size: 12px; font-family: var(--sans);
-    transition: all 0.2s; white-space: nowrap;
-  }
-
-  .chapter-nav-btn:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
-  .chapter-nav-btn:disabled { opacity: 0.3; cursor: default; }
-
-  .chapter-content {
-    max-width: 680px; margin: 0 auto;
-    padding: 3rem 1.5rem 5rem;
-  }
-
-  .chapter-heading {
-    font-family: var(--serif);
-    font-size: clamp(1.6rem, 4vw, 2.2rem);
-    font-weight: 300;
-    text-align: center;
-    margin-bottom: 0.5rem;
-    line-height: 1.3;
-  }
-
-  .chapter-meta {
-    text-align: center;
-    font-size: 12px; color: var(--muted);
-    margin-bottom: 3rem;
-    letter-spacing: 0.05em;
-  }
-
-  .chapter-body {
-    font-family: var(--serif);
-    font-size: clamp(16px, 2.5vw, 18px);
-    line-height: 1.95;
-    color: var(--text);
-  }
-
-  .chapter-body p { margin-bottom: 1.4em; }
-
-  .chapter-body p.dialogue {
-    padding-left: 1.2em;
-    border-left: 2px solid rgba(201,169,110,0.3);
-    color: var(--accent2);
-  }
-
-  /* reading font size control */
-  .font-controls {
-    display: flex; gap: 6px; align-items: center;
-  }
-
-  .font-btn {
-    background: none; border: 1px solid var(--border);
-    color: var(--muted); width: 28px; height: 28px;
-    border-radius: 3px; cursor: pointer; font-size: 14px;
-    display: flex; align-items: center; justify-content: center;
-    transition: all 0.15s;
-  }
-
-  .font-btn:hover { border-color: var(--accent); color: var(--accent); }
-
-  /* TOC */
-  .toc-sidebar {
-    position: fixed; right: -320px; top: 0; bottom: 0;
-    width: 300px; background: var(--bg2);
-    border-left: 1px solid var(--border);
-    z-index: 200; transition: right 0.3s;
-    overflow-y: auto; padding: 1.5rem;
-  }
-
-  .toc-sidebar.open { right: 0; }
-
-  .toc-overlay {
-    display: none; position: fixed; inset: 0;
-    background: rgba(0,0,0,0.5); z-index: 199;
-  }
-
-  .toc-overlay.open { display: block; }
-
-  .toc-title {
-    font-family: var(--serif);
-    font-size: 18px; margin-bottom: 1rem;
-    padding-bottom: 0.75rem;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .toc-list { list-style: none; }
-
-  .toc-list li a {
-    display: block; padding: 6px 0;
-    font-size: 13px; color: var(--muted);
-    text-decoration: none; border-bottom: 1px solid var(--border);
-    transition: color 0.2s;
-  }
-
-  .toc-list li a:hover { color: var(--accent); }
-  .toc-list li a.current { color: var(--accent); font-weight: 500; }
-
-  /* ── SUPPORT ── */
-  #support { background: var(--bg2); }
-
-  .support-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem;
-  }
-
-  .support-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 1.5rem;
-    text-align: center;
-  }
-
-  .support-icon { font-size: 2rem; margin-bottom: 0.75rem; display: block; }
-
-  .support-card h3 {
-    font-family: var(--serif);
-    font-size: 18px; font-weight: 400;
-    margin-bottom: 0.5rem;
-  }
-
-  .support-card p { font-size: 13px; color: var(--muted); margin-bottom: 1.25rem; }
-
-  /* ── ABOUT ── */
-  .about-inner {
-    max-width: 620px; margin: 0 auto; text-align: center;
-  }
-
-  .about-inner p { color: var(--muted); font-size: 15px; line-height: 1.9; margin-bottom: 1em; }
-
-  /* ── FOOTER ── */
-  footer {
-    background: var(--bg);
-    border-top: 1px solid var(--border);
-    padding: 2.5rem 1.5rem;
-    text-align: center;
-  }
-
-  footer p { font-size: 12px; color: var(--muted); margin-top: 0.5rem; }
-
-  .footer-links { display: flex; gap: 1.5rem; justify-content: center; margin-bottom: 1rem; }
-  .footer-links a { font-size: 12px; color: var(--muted); text-decoration: none; }
-  .footer-links a:hover { color: var(--accent); }
-
-  /* ── RESPONSIVE ── */
-  @media (max-width: 600px) {
-    .nav-links { gap: 0.75rem; }
-    .nav-links .hide-mobile { display: none; }
-    .ad-rect { width: 100%; }
-    .chapter-nav-bar { flex-wrap: wrap; }
-  }
-
-  /* ── ANIMATIONS ── */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-
-  .fade-up {
-    opacity: 0;
-    animation: fadeUp 0.7s ease forwards;
-  }
-
-  .fade-up:nth-child(2) { animation-delay: 0.1s; }
-  .fade-up:nth-child(3) { animation-delay: 0.2s; }
-  .fade-up:nth-child(4) { animation-delay: 0.3s; }
-  /* ── TOC CHAPTER LIST ── */
-  .toc-ch-link {
-    display: flex; align-items: center; gap: 12px;
-    padding: 12px 8px;
-    border-bottom: 0.5px solid var(--border);
-    text-decoration: none; color: var(--text);
-    transition: background 0.15s;
-    border-radius: 4px;
-  }
-  .toc-ch-link:hover { background: var(--bg2); }
-  .toc-ch-num {
-    font-size: 12px; color: var(--muted);
-    min-width: 28px; text-align: right; flex-shrink: 0;
-  }
-  .toc-ch-title { flex: 1; font-size: 14px; line-height: 1.4; }
-  .toc-badge {
-    font-size: 10px; letter-spacing: 0.05em;
-    padding: 2px 7px; border-radius: 20px; flex-shrink: 0;
-  }
-  .toc-badge-ext { background: rgba(201,169,110,0.12); color: var(--accent); }
-  .toc-badge-own { background: rgba(100,180,120,0.15); color: #7bbf8a; }
-</style>
 </head>
 <body>
-
-<!-- TOC sidebar -->
-
 
 <!-- NAV -->
 <nav>
@@ -552,7 +43,7 @@
     </div>
   </section>
 
-  <!-- AD: Leaderboard below hero (prime AdSense placement) -->
+  <!-- AD: Leaderboard below hero -->
   <div style="max-width:var(--max); margin:0 auto; padding:0 1.5rem;">
     <div class="ad-slot ad-leaderboard">
       <!-- AdSense leaderboard 728×90
@@ -735,91 +226,9 @@
 </div><!-- /toc-view -->
 
 
-<!-- ══════════════════════ CHAPTER VIEW ══════════════════════ -->
-<div id="chapter-view">
-
-  <div class="chapter-nav-bar">
-    <div style="display:flex; gap:6px; align-items:center;">
-      <button class="chapter-nav-btn" onclick="showHome()">← Library</button>
-      <button class="chapter-nav-btn" onclick="openNovel(currentNovel.id)">☰ TOC</button>
-    </div>
-    <div class="chapter-title-bar" id="chapterTitleBar">Chapter 1</div>
-    <div style="display:flex; gap:6px; align-items:center;">
-      <div class="font-controls">
-        <button class="font-btn" onclick="changeFontSize(-1)">A-</button>
-        <button class="font-btn" onclick="changeFontSize(1)">A+</button>
-      </div>
-      <button class="chapter-nav-btn" id="prevBtn" onclick="prevChapter()">‹ Prev</button>
-      <button class="chapter-nav-btn" id="nextBtn" onclick="nextChapter()">Next ›</button>
-    </div>
-  </div>
-
-  <!-- AD: Banner at top of chapter -->
-  <div style="max-width:var(--max); margin:1rem auto; padding:0 1.5rem;">
-    <div class="ad-slot ad-banner">
-      <!-- AdSense horizontal 728×90
-      <ins class="adsbygoogle" style="display:block"
-           data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-           data-ad-slot="XXXXXXXXXX"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-      -->
-      AdSense · Top of Chapter
-    </div>
-  </div>
-
-  <div class="chapter-content">
-    <h1 class="chapter-heading" id="chapterHeading">Chapter 1</h1>
-    <div class="chapter-meta" id="chapterMeta"></div>
-    <div class="chapter-body" id="chapterBody"></div>
-
-    <!-- AD: Mid-chapter (high engagement placement) -->
-    <div class="ad-slot ad-leaderboard" style="margin:3rem auto;">
-      <!-- AdSense mid-chapter
-      <ins class="adsbygoogle" style="display:block"
-           data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-           data-ad-slot="XXXXXXXXXX"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-      -->
-      AdSense · Mid-Chapter
-    </div>
-
-    <div id="chapterBodyEnd"></div>
-  </div>
-
-  <!-- AD: End of chapter (reader decision point = high click potential) -->
-  <div style="max-width:var(--max); margin:0 auto; padding:0 1.5rem 2rem; display:flex; justify-content:center;">
-    <div class="ad-slot ad-rect">
-      <!-- AdSense end of chapter
-      <ins class="adsbygoogle" style="display:block;width:300px;height:250px"
-           data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-           data-ad-slot="XXXXXXXXXX"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-      -->
-      AdSense · End of Chapter 300×250
-    </div>
-  </div>
-
-  <!-- Chapter nav at bottom -->
-  <div style="display:flex; justify-content:space-between; max-width:var(--max); margin:0 auto; padding:1rem 1.5rem 4rem;">
-    <button class="btn btn-outline" id="prevBtnBottom" onclick="prevChapter()">‹ Previous Chapter</button>
-    <button class="btn btn-outline" id="nextBtnBottom" onclick="nextChapter()">Next Chapter ›</button>
-  </div>
-
-</div><!-- /chapter-view -->
-
-
 <script>
 // ═══════════════════════════════════════════════
 //  NOVEL DATA
-//  Each chapter needs a title and a url.
-//  - url: external link (Foxaholic etc.) OR null if you've added your own translation (use body instead)
-//  - body: your translated HTML text (only needed when url is null)
-//  To replace a chapter with your own translation:
-//    Change url to null and add body: `<p>Your text here.</p>`
 // ═══════════════════════════════════════════════
 const NOVELS = [
   {
@@ -830,39 +239,26 @@ const NOVELS = [
     tags: ['ongoing', 'beastworld', 'reverse harem', 'transmigration'],
     description: 'A modern girl transmigrates into a beast world full of handsome beastmen — and somehow ends up with more husbands than she bargained for.',
     chapters: [
-      { title: 'Chapter 1 - Foxaholic!',   url: 'https://www.foxaholic.com/novel/cute-beast-world-beast-husband-memeda/chapter-1/' },
-      { title: 'Chapter 2 - Foxaholic',                        url: 'https://www.foxaholic.com/novel/cute-beast-world-beast-husband-memeda/chapter-2/' },
-      { title: 'Chapter 3 - Foxaholic',                        url: 'https://www.foxaholic.com/novel/cute-beast-world-beast-husband-memeda/chapter-3/' },
-      { title: 'Chapter 4 - Foxaholic',             url: 'https://www.foxaholic.com/novel/cute-beast-world-beast-husband-memeda/chapter-4/' },
-      { title: 'Chapter 5 - Foxaholic',              url: 'https://www.foxaholic.com/novel/cute-beast-world-beast-husband-memeda/chapter-5/' },
-      { title: 'Chapter 6 - Foxaholic',                        url: 'https://www.foxaholic.com/novel/cute-beast-world-beast-husband-memeda/chapter-6/' },
-      { title: 'Chapter 7',  url:'./cbwbhm-chapters/chapter-7.html'},
-      { title: 'Chapter 8',  url:'./cbwbhm-chapters/chapter-8.html'},
-      { title: 'Chapter 9',  url:'./cbwbhm-chapters/chapter-9.html'},
-      { title: 'Chapter 10',  url:'./cbwbhm-chapters/chapter-10.html'},
-      { title: 'Chapter 11',  url:'./cbwbhm-chapters/chapter-11.html'}
+      { title: 'Chapter 1', url: 'https://www.foxaholic.com/novel/cute-beast-world-beast-husband-memeda/chapter-1/' },
+      { title: 'Chapter 2', url: 'https://www.foxaholic.com/novel/cute-beast-world-beast-husband-memeda/chapter-2/' },
+      { title: 'Chapter 3', url: 'https://www.foxaholic.com/novel/cute-beast-world-beast-husband-memeda/chapter-3/' },
+      { title: 'Chapter 4', url: 'https://www.foxaholic.com/novel/cute-beast-world-beast-husband-memeda/chapter-4/' },
+      { title: 'Chapter 5', url: 'https://www.foxaholic.com/novel/cute-beast-world-beast-husband-memeda/chapter-5/' },
+      { title: 'Chapter 6', url: 'https://www.foxaholic.com/novel/cute-beast-world-beast-husband-memeda/chapter-6/' },
+      { title: 'Chapter 7 — Damn It!',            url: './cbwbhm-chapters/chapter-7.html' },
+      { title: 'Chapter 8 — Shuangyun',           url: './cbwbhm-chapters/chapter-8.html' },
+      { title: 'Chapter 9 — Bachelor For Life',   url: './cbwbhm-chapters/chapter-9.html' },
+      { title: 'Chapter 10 — Annoying Pest',      url: './cbwbhm-chapters/chapter-10.html' },
+      { title: 'Chapter 11 — Stay Away From Me!', url: './cbwbhm-chapters/chapter-11.html' },
     ]
   },
   // ── Add more novels below ──
-  // {
-  //   id: 'your-novel-id',
-  //   title: 'Novel Title',
-  //   author: 'Original: 中文 by Author',
-  //   cover: { emoji: '🌸', bg: 'linear-gradient(135deg,#3a1a2a,#6b2d4a)' },
-  //   tags: ['ongoing', 'romance'],
-  //   description: 'Short description here.',
-  //   chapters: [
-  //     { title: 'Chapter 1', url: 'https://...' },
-  //   ]
-  // },
 ];
 
 // ═══════════════════════════════════════════════
 //  STATE
 // ═══════════════════════════════════════════════
 let currentNovel = null;
-let currentChapterIdx = 0;
-let fontSize = 18;
 
 // ═══════════════════════════════════════════════
 //  RENDER NOVEL GRID
@@ -878,18 +274,16 @@ function renderGrid() {
         <div class="novel-title">${novel.title}</div>
         <div class="novel-author">${novel.author}</div>
         <div class="novel-tags">
-          ${novel.tags.map((t,i) => `<span class="tag ${i===0?'tag-gold':''}">${t}</span>`).join('')}
+          ${novel.tags.map((t, i) => `<span class="tag ${i === 0 ? 'tag-gold' : ''}">${t}</span>`).join('')}
         </div>
-        <div class="chapter-count">${novel.chapters.length} chapter${novel.chapters.length!==1?'s':''} listed</div>
+        <div class="chapter-count">${novel.chapters.length} chapter${novel.chapters.length !== 1 ? 's' : ''} listed</div>
       </div>
     </a>
   `).join('');
 }
 
 // ═══════════════════════════════════════════════
-//  NOVEL → TOC PAGE (not chapter reader)
-//  Clicking a novel card shows the TOC, not the reader.
-//  Each TOC entry is a plain hyperlink.
+//  OPEN NOVEL → TOC PAGE
 // ═══════════════════════════════════════════════
 function openNovel(id) {
   currentNovel = NOVELS.find(n => n.id === id);
@@ -902,12 +296,11 @@ function openNovel(id) {
 function showHome() {
   document.getElementById('home-view').style.display = 'block';
   document.getElementById('toc-view').style.display = 'none';
-  document.getElementById('chapter-view').style.display = 'none';
   document.title = 'Silken Thread Translations';
 }
 
 // ═══════════════════════════════════════════════
-//  BUILD TOC (dedicated page)
+//  BUILD TOC — bug fixed: badge is now defined
 // ═══════════════════════════════════════════════
 function buildTOC() {
   document.getElementById('tocNovelTitle').textContent = currentNovel.title;
@@ -917,58 +310,21 @@ function buildTOC() {
 
   const list = document.getElementById('tocChapterList');
   list.innerHTML = currentNovel.chapters.map((ch, i) => {
-    const href = ch.url ? ch.url : '#';
-    const target = ch.url ? 'target="_blank" rel="noopener"' : '';
-    const onclick = ch.url ? '' : `onclick="openLocalChapter(${i}); return false;"`;
+    const isExternal = ch.url && !ch.url.startsWith('./');
+    const href = ch.url || '#';
+    const target = isExternal ? 'target="_blank" rel="noopener"' : '';
+    const badge = isExternal
+      ? `<span class="toc-badge toc-badge-ext">↗ External</span>`
+      : `<span class="toc-badge toc-badge-own">✦ Own TL</span>`;
+
     return `<li>
-      <a href="${href}" ${target} ${onclick} class="toc-ch-link">
+      <a href="${href}" ${target} class="toc-ch-link">
         <span class="toc-ch-num">${i + 1}</span>
         <span class="toc-ch-title">${ch.title}</span>
         ${badge}
       </a>
     </li>`;
   }).join('');
-}
-
-// ═══════════════════════════════════════════════
-//  LOCAL CHAPTER READER (for your own translations)
-// ═══════════════════════════════════════════════
-function openLocalChapter(idx) {
-  currentChapterIdx = idx;
-  const ch = currentNovel.chapters[idx];
-  document.title = `${ch.title} — ${currentNovel.title} | Silken Thread`;
-  document.getElementById('chapterHeading').textContent = ch.title;
-  document.getElementById('chapterMeta').textContent = `${currentNovel.title}`;
-  document.getElementById('chapterTitleBar').textContent = ch.title;
-  document.getElementById('chapterBody').innerHTML = ch.body || '<p>Translation coming soon!</p>';
-  document.getElementById('chapterBody').style.fontSize = fontSize + 'px';
-
-  const localChapters = currentNovel.chapters.filter(c => !c.url);
-  const localIdx = localChapters.indexOf(ch);
-  document.getElementById('prevBtn').disabled = localIdx <= 0;
-  document.getElementById('nextBtn').disabled = localIdx >= localChapters.length - 1;
-  document.getElementById('prevBtnBottom').disabled = localIdx <= 0;
-  document.getElementById('nextBtnBottom').disabled = localIdx >= localChapters.length - 1;
-
-  document.getElementById('toc-view').style.display = 'none';
-  document.getElementById('chapter-view').style.display = 'block';
-  window.scrollTo({ top: 0, behavior: 'instant' });
-}
-
-function prevChapter() {
-  if (currentChapterIdx > 0) { openLocalChapter(currentChapterIdx - 1); }
-}
-
-function nextChapter() {
-  if (currentChapterIdx < currentNovel.chapters.length - 1) { openLocalChapter(currentChapterIdx + 1); }
-}
-
-// ═══════════════════════════════════════════════
-//  FONT SIZE
-// ═══════════════════════════════════════════════
-function changeFontSize(delta) {
-  fontSize = Math.min(24, Math.max(14, fontSize + delta));
-  document.getElementById('chapterBody').style.fontSize = fontSize + 'px';
 }
 
 // ═══════════════════════════════════════════════
